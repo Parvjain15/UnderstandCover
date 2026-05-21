@@ -127,12 +127,12 @@ export const DEMO_SUMMARY: PolicySummary = {
     },
   ],
   limits_json: [
-    { title: 'Total Contents Limit', amount: '£5,000', context: 'Maximum payout for all contents claims combined', page: 4, section: 'Section 2' },
-    { title: 'Single Item Limit', amount: '£1,500', context: 'Maximum payout for any one item under personal possessions', page: 7, section: 'Section 3' },
-    { title: 'Liability Cover', amount: '£1,000,000', context: 'Maximum personal liability payout', page: 12, section: 'Section 5' },
-    { title: 'Voluntary Excess', amount: '£150', context: 'The amount you must pay towards each claim', page: 3, section: 'Policy Schedule' },
-    { title: 'Compulsory Excess', amount: '£50', context: 'Mandatory excess applied by Acme to all claims', page: 3, section: 'Policy Schedule' },
-    { title: 'Cash Cover Limit', amount: '£300', context: 'Maximum cover for cash in the home', page: 6, section: 'Section 2' },
+    { title: 'Total Contents Limit', amount: '£5,000', context: 'Maximum payout for all contents claims combined', page: 4, section: 'Section 2', quote: '' },
+    { title: 'Single Item Limit', amount: '£1,500', context: 'Maximum payout for any one item under personal possessions', page: 7, section: 'Section 3', quote: '' },
+    { title: 'Liability Cover', amount: '£1,000,000', context: 'Maximum personal liability payout', page: 12, section: 'Section 5', quote: '' },
+    { title: 'Voluntary Excess', amount: '£150', context: 'The amount you must pay towards each claim', page: 3, section: 'Policy Schedule', quote: '' },
+    { title: 'Compulsory Excess', amount: '£50', context: 'Mandatory excess applied by Acme to all claims', page: 3, section: 'Policy Schedule', quote: '' },
+    { title: 'Cash Cover Limit', amount: '£300', context: 'Maximum cover for cash in the home', page: 6, section: 'Section 2', quote: '' },
   ],
   risk_flags_json: [
     {
@@ -179,6 +179,29 @@ export const DEMO_SUMMARY: PolicySummary = {
       page: 5,
       section: 'Section 2 – Contents Cover',
       questionToAsk: 'Can I add accidental damage cover mid-policy and what would the extra cost be?',
+    },
+  ],
+  important_conditions_json: [
+    {
+      title: 'Report Theft Within 30 Days',
+      explanation: 'You must notify Acme within 30 days of any theft or loss. For theft, you also need a police crime reference number — without it your claim may be rejected.',
+      page: 15,
+      section: 'Section 7 – Making a Claim',
+      quote: 'notify us within 30 days of the incident',
+    },
+    {
+      title: 'Reasonable Care Duty',
+      explanation: 'You must take reasonable steps to prevent loss or damage. If you leave doors unlocked or items unattended, Acme can reduce or reject your claim.',
+      page: 16,
+      section: 'Section 8 – General Conditions',
+      quote: 'you must take reasonable steps to prevent loss or damage',
+    },
+    {
+      title: 'High-Value Items Must Be Declared',
+      explanation: 'Items worth more than £1,500 must be individually declared and agreed by Acme before they are covered. Undeclared high-value items will only be paid up to the single-item limit.',
+      page: 8,
+      section: 'Section 3 – Personal Possessions',
+      quote: 'items exceeding the single article limit require separate declaration',
     },
   ],
   generated_at: new Date().toISOString(),

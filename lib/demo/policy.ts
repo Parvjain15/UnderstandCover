@@ -18,6 +18,7 @@ export const DEMO_POLICY: Policy = {
   processing_error: null,
   total_pages: 18,
   uploaded_at: new Date().toISOString(),
+  user_context_json: null,
 }
 
 export const DEMO_SUMMARY: PolicySummary = {

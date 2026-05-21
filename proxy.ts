@@ -3,7 +3,7 @@ import { NextResponse, type NextRequest } from 'next/server'
 
 type CookieToSet = { name: string; value: string; options?: Record<string, unknown> }
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   let supabaseResponse = NextResponse.next({ request })
 
   const supabase = createServerClient(
@@ -25,10 +25,8 @@ export async function middleware(request: NextRequest) {
     }
   )
 
-  // Refresh the session — keeps the user logged in across page navigations
   const { data: { user } } = await supabase.auth.getUser()
 
-  // Redirect logged-in users away from auth pages
   const url = request.nextUrl.clone()
   if (user && (url.pathname === '/signin' || url.pathname === '/signup')) {
     url.pathname = '/policies'
